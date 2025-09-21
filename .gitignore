@@ -1,0 +1,24 @@
+# JetBrains / IntelliJ (keep only essential project config files)
+**/.idea/*
+!**/.idea
+!**/.idea/modules.xml
+!**/.idea/misc.xml
+!**/.idea/encodings.xml
+!**/.idea/runConfigurations/
+!**/.idea/runConfigurations/*.xml
+
+# VS/VSCode
+*.user
+*.suo
+.vscode/
+
+# System
+*.DS_Store
+*.swp
+*.bak
+
+# Build
+bin/
+obj/
+out/
+*.jar

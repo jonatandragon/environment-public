@@ -1,0 +1,41 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>io.pulsar.theme</id>
+    <version>1.4.0</version>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>Pulsar Light Theme</name>
+    <category>UI</category>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor>Jonatan Dragon</vendor>
+
+    <idea-version since-build="251"/>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description><![CDATA[
+        A bright, focused light theme that puts important code elements in the spotlight. 
+        Comments blend in with a single, subtle shade to minimize distraction, 
+        while variables and parameters stay understated in black—like text in a good story. 
+        Bold colors highlight numbers and key syntax, making what matters instantly stand out.
+    ]]></description>
+
+    <!-- Short summary of new features and bugfixes in the latest plugin version.
+         Displayed on the Plugin Page and IDE Plugin Manager. Simple HTML elements can be included between <![CDATA[  ]]> tags. -->
+    <change-notes><![CDATA[
+        Initial release of the Rider theme, ported from the Visual Studio theme, with some small improvements and tweaks and
+        support for new languages.
+    ]]></change-notes>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <bundledColorScheme id="Pulsar" path="/theme/pulsar" />
+        <themeProvider id="Pulsar" path="/theme/pulsar.theme.json"/>
+    </extensions>
+</idea-plugin>
