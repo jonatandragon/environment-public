@@ -1,0 +1,71 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "root",
+          "foreground": "#E05A5A",
+          "template": "  "
+        },
+        {
+          "type": "os",
+          "foreground": "#3DBFA0",
+          "foreground_templates": [
+            "{{ if eq .OS \"windows\" }}#6FA3D8{{ end }}",
+            "{{ if eq .OS \"darwin\" }}#A2AAAD{{ end }}"
+          ],
+          "template": "{{.Icon}}{{ if .WSL }} WSL{{ end }}  "
+        },
+        {
+          "type": "path",
+          "foreground": "#E67E00",
+          "options": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "template": "{{ .Path }} "
+        },
+        {
+          "type": "git",
+          "foreground": "#838383",
+          "options": {
+            "fetch_status": true
+          },
+          "template": "{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}"
+        },
+        {
+          "foreground": "#E05A5A",
+          "options": {
+            "style": "austin",
+            "threshold": 5000
+          },
+          "template": " {{ .FormattedMs }}",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#E05A5A",
+          "template": " \uef4f",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#A2AAAD",
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title_template": "{{if .Root}}(Admin) {{end}}{{.Folder}}",
+  "version": 4
+}

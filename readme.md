@@ -13,4 +13,6 @@ See [`ide/pulsar`](ide/pulsar) for color details.
 
 ## Oh My Posh
 
-Terminal prompt config in [`oh-my-posh`](oh-my-posh).
+Terminal prompt themes in [`oh-my-posh`](oh-my-posh).
+
+* **Vein** — `vein.omp.json`
