@@ -16,7 +16,7 @@
             "{{ if eq .OS \"windows\" }}#6FA3D8{{ end }}",
             "{{ if eq .OS \"darwin\" }}#A2AAAD{{ end }}"
           ],
-          "template": "{{.Icon}}{{ if .WSL }} WSL{{ end }}  "
+          "template": "{{.Icon}} {{ if .WSL }}WSL{{ end }} "
         },
         {
           "type": "path",
@@ -25,7 +25,7 @@
             "folder_separator_icon": "/",
             "style": "full"
           },
-          "template": "{{ .Path }} "
+          "template": "{{ .Path }}"
         },
         {
           "type": "git",
@@ -33,7 +33,7 @@
           "options": {
             "fetch_status": true
           },
-          "template": "{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}"
+          "template": " {{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}"
         },
         {
           "foreground": "#E05A5A",
