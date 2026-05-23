@@ -46,7 +46,7 @@
         },
         {
           "foreground": "#E05A5A",
-          "template": " \uef4f",
+          "template": " \uf21e",
           "type": "status"
         }
       ],
